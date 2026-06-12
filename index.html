@@ -73,7 +73,7 @@
                 const formData = new FormData();
                 formData.append('audio', blob);
 
-                const response = await fetch('http://localhost:3001/api/process-audio', { method: 'POST', body: formData });
+                const response = await fetch('http://http://10.0.15.54/api/chat/api/process-audio', { method: 'POST', body: formData });
                 const data = await response.json();
                 document.getElementById(loadingId).remove();
 
@@ -103,7 +103,7 @@
                 const loadingId = appendMessage('Guido IA', 'Pintando tu cuadro en la nube con GPUs...', 'self-start bg-gray-800/40 border border-gray-700/50 text-gray-400 animate-pulse');
                 
                 try {
-                    const response = await fetch('http://localhost:3001/api/generate-image', {
+                    const response = await fetch('http://http://http://10.0.15.54/api/chat/api/process-audio/api/generate-image', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ prompt: descripcionFoto })
@@ -125,7 +125,7 @@
                 const loadingId = appendMessage('Guido IA', 'Pensando...', 'self-start bg-gray-800/40 border border-gray-700/50 text-gray-400 animate-pulse');
                 
                 try {
-                    const response = await fetch('http://localhost:3001/api/chat', {
+                    const response = await fetch('http://http://10.0.15.54/api/chat/api/process-audio/api/chat', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ prompt: prompt })
